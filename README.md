@@ -6,6 +6,7 @@ npm install -g expo-cli
 npm install --global expo-cli@4.4.7 -> versão utilizada no curso
 expo --version
 
+# Git
 
 expo init my-project
 
