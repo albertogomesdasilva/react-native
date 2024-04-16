@@ -1,23 +1,39 @@
 import React from "react"
-import { TouchableOpacity, Text } from "react-native"
+import { TouchableOpacity, Text, StyleSheet } from "react-native"
 
-export class BotaoClasse extends React.Component {
+interface BotaoProps {
+    titulo2: string
+  }
+  
+
+export class BotaoClasse extends React.Component<BotaoProps> {
     render(){
-        return (
-        <TouchableOpacity style={{
-            backgroundColor: 'blue',
-            padding: 20,
-            borderRadius: 5
-        }}
+       
+        return ( 
+        <TouchableOpacity style={styles.botao}
         >
-            <Text style={{
-            color: 'white',
-            fontSize: 20
-            }}>
-            Botão Classe
+            <Text style={styles.legenda} >
+                {this.props.titulo2}
             </Text>
     
         </TouchableOpacity>
         );
+    } 
+ }
+
+ const styles = StyleSheet.create({
+    botao: {
+        backgroundColor: 'green',
+        width: 150,
+        marginTop: 10,
+        padding: 10,
+        borderRadius: 15,
+        alignItems: 'center',
+    },
+    legenda: {
+        fontSize: 20,
+        color: 'yellow',
+        
     }
-    }
+})
+    

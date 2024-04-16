@@ -1,13 +1,30 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Alert, StyleSheet, Text, View } from 'react-native';
 
 import {Botao} from './src/components/Botao';
 import { BotaoClasse } from './src/components/BotaoClasse';
 
 export default function App() {
+  let valor = 0;
+
+  function aumentar(){
+    valor++;
+   console.log(valor++);
+  }
+  
+
+
   return (
     <View style={styles.container}>
-     <Botao />
-     <BotaoClasse />
+     <Text style={{fontSize:30, color:"red"}}> Valor: {valor}</Text>
+
+     <Botao  titulo="Aumentar +"  
+      onPress={aumentar}
+     />
+
+     <BotaoClasse  titulo2="Diminuir -"
+      onPress={console.log(valor)}
+     />
     </View>
   );
 }

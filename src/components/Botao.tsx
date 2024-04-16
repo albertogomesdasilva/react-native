@@ -1,21 +1,29 @@
 import React from "react"
 import { TouchableOpacity, Text } from "react-native"
 
+interface BotaoProps {
+  titulo: string
+}
 
-export function Botao(){
+
+export function Botao({titulo}: BotaoProps){
+
   return (
 
     <TouchableOpacity style={{
       backgroundColor: 'blue',
-        padding: 20,
-        borderRadius: 5
+        padding: 8,
+        width: 150,
+        borderRadius: 12
       }}
     >
         <Text style={{
           color: 'white',
           fontSize: 20
-        }}>
-          Click Me
+        }}> 
+        
+        {titulo}
+          
         </Text>
 
     </TouchableOpacity>
